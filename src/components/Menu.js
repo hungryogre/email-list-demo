@@ -23,7 +23,7 @@ export default class Menu extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <Navbar light>
+                <Navbar color='dark' dark>
                     <NavbarBrand href='/'>{this.props.name}</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
