@@ -1,6 +1,7 @@
 import React from 'react';
 import { hot } from 'react-hot-loader'
 import Menu from './Menu'
+import CardList from './CardList'
 import './App.css'
 
 const propTypes = {};
@@ -17,7 +18,7 @@ class App extends React.Component {
         return (
             <React.Fragment>
                 <Menu name='Email List' />
-                <h1>Hello, World!</h1>
+                <CardList />
             </React.Fragment>
         );
     }
