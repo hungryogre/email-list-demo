@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { Navbar, NavbarBrand, NavbarToggler, NavbarTogglerProps } from 'reactstrap'
 import { Collapse, Nav, NavItem, NavLink } from 'reactstrap'
 
+import FilterText from './FilterText'
+
 const propTypes = {
     name: PropTypes.string.isRequired
 }
@@ -25,7 +27,7 @@ export default class Menu extends React.Component {
             <React.Fragment>
                 <Navbar color='dark' dark>
                     <NavbarToggler onClick={this.toggle} />
-
+                    <FilterText />
                     <NavbarBrand href='/'>{this.props.name}</NavbarBrand>
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav navbar>
