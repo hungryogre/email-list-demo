@@ -1,0 +1,3 @@
+export const EDIT_FILTER = 'EDIT_FILTER'
+export const TOGGLE_REGEX = 'TOGGLE_REGEX'
+export const CLEAR_FILTER = 'CLEAR_FILTER'
