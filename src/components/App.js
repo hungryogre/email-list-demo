@@ -1,5 +1,8 @@
 import React from 'react';
+import { Provider } from 'react-redux'
 import { hot } from 'react-hot-loader'
+
+import store from '../store'
 import Menu from './Menu'
 import CardList from './CardList'
 import './App.css'
@@ -16,10 +19,12 @@ class App extends React.Component {
 
     render() {
         return (
-            <React.Fragment>
-                <Menu name='Email List' />
-                <CardList />
-            </React.Fragment>
+            <Provider store={store}>
+                <React.Fragment>
+                    <Menu name='Email List' />
+                    <CardList />
+                </React.Fragment>
+            </Provider>
         );
     }
 }

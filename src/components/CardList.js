@@ -14,7 +14,7 @@ export default class Cards extends React.Component {
 
     render() {
         return (
-            <React.Fragment>
+            <React.Provider>
                 <Container fluid>
                     <Row>
                         <Col>Content</Col>
@@ -35,7 +35,7 @@ export default class Cards extends React.Component {
                         <Col>Content</Col>
                     </Row>
                 </Container>
-            </React.Fragment>
+            </React.Provider>
         );
     }
 }

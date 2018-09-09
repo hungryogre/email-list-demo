@@ -22,7 +22,7 @@ export default class Menu extends React.Component {
 
     render() {
         return (
-            <React.Fragment>
+            <React.Provider>
                 <Navbar color='dark' dark>
                     <NavbarBrand href='/'>{this.props.name}</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
@@ -37,7 +37,7 @@ export default class Menu extends React.Component {
                         </Nav>
                     </Collapse>
                 </Navbar>
-            </React.Fragment>
+            </React.Provider>
         )
     }
 }
