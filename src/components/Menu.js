@@ -27,8 +27,8 @@ export default class Menu extends React.Component {
             <React.Fragment>
                 <Navbar color='dark' dark>
                     <NavbarToggler onClick={this.toggle} />
-                    <FilterText />
                     <NavbarBrand href='/'>{this.props.name}</NavbarBrand>
+                    <FilterText />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav navbar>
                             <NavItem>
