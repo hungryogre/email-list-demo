@@ -4,7 +4,7 @@ import { hot } from 'react-hot-loader'
 
 import store from '../store'
 import Menu from './Menu'
-import CardList from './CardList'
+import VisibleCardList from '../containers/VisibleCardList'
 import './App.css'
 
 const propTypes = {};
@@ -22,7 +22,7 @@ class App extends React.Component {
             <Provider store={store}>
                 <React.Fragment>
                     <Menu name='Email List' />
-                    <CardList />
+                    <VisibleCardList />
                 </React.Fragment>
             </Provider>
         );

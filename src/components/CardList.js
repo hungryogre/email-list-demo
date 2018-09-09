@@ -1,15 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 import { Container, Row, Col } from 'reactstrap'
 
-const propTypes = {};
+const propTypes = {
+    emails: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        address: PropTypes.string.isRequired,
+    }))
+}
 
-const defaultProps = {};
+const defaultProps = {
+    emails: []
+}
 
 export default class Cards extends React.Component {
     constructor(props) {
-        super(props);
-        this.state = {};
+        super(props)
+        this.state = {}
     }
 
     render() {
@@ -17,28 +24,13 @@ export default class Cards extends React.Component {
             <React.Fragment>
                 <Container fluid>
                     <Row>
-                        <Col>Content</Col>
-                        <Col>Content</Col>
-                        <Col>Content</Col>
-                        <Col>Content</Col>
-                        <Col>Content</Col>
-                        <Col>Content</Col>
-                        <Col>Content</Col>
-                        <Col>Content</Col>
-                        <Col>Content</Col>
-                        <Col>Content</Col>
-                        <Col>Content</Col>
-                        <Col>Content</Col>
-                        <Col>Content</Col>
-                        <Col>Content</Col>
-                        <Col>Content</Col>
-                        <Col>Content</Col>
+                        {this.props.emails.map(em => <Col key={em.id}>{em.address}</Col>)}
                     </Row>
                 </Container>
             </React.Fragment>
-        );
+        )
     }
 }
 
-Cards.propTypes = propTypes;
-Cards.defaultProps = defaultProps;
+Cards.propTypes = propTypes
+Cards.defaultProps = defaultProps
