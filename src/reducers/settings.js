@@ -12,7 +12,7 @@ const initialState = {
 const handlers = {
     [EDIT_USERNAME]: (state, action) => { userName: action.payload },
     [EDIT_PASSWORD]: (state, action) => { password: action.payload },
-    [EDIT_HOSTNAME]: (state, action) => { seerver: action.payload }
+    [EDIT_HOSTNAME]: (state, action) => { server: action.payload }
 }
 
 export default createReducer(initialState, handlers)
