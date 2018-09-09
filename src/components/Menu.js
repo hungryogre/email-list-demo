@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Navbar, NavbarBrand, NavbarToggler, NavbarTogglerProps } from 'reactstrap'
 import { Collapse, Nav, NavItem, NavLink } from 'reactstrap'
 
-import FilterText from './FilterText'
+import FilterText from '../containers/FilterText'
 
 const propTypes = {
     name: PropTypes.string.isRequired

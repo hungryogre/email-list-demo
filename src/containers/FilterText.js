@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { Form, Input } from 'reactstrap'
 import { connect } from 'react-redux'
 
-import { EDIT_FITLER, TOGGLE_REGEX, CLEAR_FILTER } from '../actions/filter'
 import { editFilter } from '../actions/filter'
 
 const propTypes = {
