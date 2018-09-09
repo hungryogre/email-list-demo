@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Container, Row, Col } from 'reactstrap'
 
+import EmailCard from './EmailCard'
+
 const propTypes = {
     emails: PropTypes.arrayOf(PropTypes.shape({
         id: PropTypes.number.isRequired,
@@ -24,7 +26,7 @@ export default class Cards extends React.Component {
             <React.Fragment>
                 <Container fluid>
                     <Row>
-                        {this.props.emails.map(em => <Col key={em.id}>{em.address}</Col>)}
+                        {this.props.emails.map(em => <Col key={em.id}><EmailCard {...em} /></Col>)}
                     </Row>
                 </Container>
             </React.Fragment>
